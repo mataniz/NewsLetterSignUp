@@ -30,10 +30,10 @@ app.post("/", function(request, response){
         ]
     };
     const subscriber = JSON.stringify(data);
-    url = "https://us21.api.mailchimp.com/3.0/lists/51a5c14ae1"
+    url = "https://usX.api.mailchimp.com/3.0/lists/audienceAPI"
     const options = {
         method : "POST",
-        auth : "zubairmatani:22077427ad410f22485dfb56a9e04d5a-us21"
+        auth : "zubairmatani:APIKEY"
     }
     const req = https.request(url, options, function(res){
         if(res.statusCode === 200){
@@ -60,6 +60,3 @@ app.post("/failure", function(request, response){
 app.listen(process.env.PORT || 3000, function(){
     console.log("Success");
 });
-
-//api 22077427ad410f22485dfb56a9e04d5a-us21
-//audience id 51a5c14ae1
